@@ -1,0 +1,52 @@
+{
+  "name": "koa-api",
+  "version": "0.0.1",
+  "description": "An example of using Koa.js to build a web API.",
+  "main": "app.js",
+  "scripts": {
+    "start": "PORT=8080 NODE_ENV=production node app.js | bunyan",
+    "test": "PORT=8080 NODE_ENV=test nyc mocha --reporter min test/**/*.js"
+  },
+  "keywords": ["koa.js", "api", "web"],
+  "private": true,
+  "author": "nattatorn.dev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArgentEnergy/koa-api.git"
+  },
+  "nyc": {
+    "reporter": ["lcov", "text-summary"],
+    "report-dir": "./coverage"
+  },
+  "dependencies": {
+    "bcrypt": "1.0.2",
+    "knex": "0.13.0",
+    "koa": "2.3.0",
+    "koa-bodyparser": "4.2.0",
+    "koa-bunyan-logger": "2.0.0",
+    "koa-json": "2.0.2",
+    "koa-json-error": "3.1.2",
+    "koa-mount": "3.0.0",
+    "koa-route": "3.2.0",
+    "lodash": "4.17.4",
+    "moment": "2.18.1",
+    "sqlite3": "3.1.8",
+    "uuid": "3.1.0",
+    "validator": "8.0.0"
+  },
+  "devDependencies": {
+    "mocha": "3.5.0",
+    "nyc": "11.1.0",
+    "sinon": "2.4.1",
+    "supertest": "3.0.0"
+  },
+  "jshintConfig": {
+    "strict": true,
+    "node": true,
+    "esnext": true,
+    "undef": true,
+    "unused": true,
+    "mocha": true
+  }
+}
